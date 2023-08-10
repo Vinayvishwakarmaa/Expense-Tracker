@@ -2,7 +2,10 @@
 
 
 :root{
-
+   --primary: #3a3a3a;
+   --primary-dark: #302d2d;
+   --green: #008104;
+   --red: #ff0000;
 }
 
 *{
@@ -13,11 +16,11 @@
 
 
 html{
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Poppines', sans-serif;
 }
 
 body{
-      background-color: green;
+      background-color: var(--primary);
 }
 
 
@@ -28,8 +31,94 @@ body{
 }
 
 .box{
-      background-color: #fff;
+      /* background-color: #fff; */
       width: 450px;
-      height: 600px;
+      height: 640px;
+      padding: 20px;
+      background-color: var(--primary-dark);
+      color: #fff;
+      position: absolute;
+}
 
+p{
+      font-size: 14px;
+}
+
+h1{
+      font-weight: 500;
+      font-size: 32px;
+}
+
+h2{
+      font-weight: 400;
+      font-size: 24px;
+}
+
+h3{
+      font-weight: 400;
+      font-size: 20px;
+}
+
+.box_upper,
+.balance{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+}
+
+
+.balance{
+      margin-top: 20px;
+}
+
+.transaction_container{
+      margin-top: 20px;
+}
+
+.transactions{
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+}
+
+ .transaction{
+      background-color: #fff;
+      color: #000;
+      display: flex;
+ }
+
+.transaction .left{
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  padding: 7px;
+  align-items: center;
+}
+
+.status{
+      min-width: 40px;
+      min-height: 40px;
+      display: grid;
+      place-items: center;
+      color: #fff;
+}
+
+.credit{
+      background-color: var(--green);
+      cursor: pointer;
+}
+
+.debit{
+      background-color: var(--red);
+      cursor: pointer;
+}
+
+.transaction_form{
+      height: 200px;
+      background-color: #fff;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
 }
